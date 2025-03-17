@@ -1,10 +1,6 @@
 import './App.css';
 import React, {useState} from 'react';
-
 import 'bootstrap/dist/css/bootstrap.min.css'; // This imports bootstrap css styles. You can use bootstrap or your own classes by using the className attribute in your elements.
-
-
-
 import { fetchWeatherApi } from "openmeteo";
 
 const cityCoordinates = {
@@ -21,7 +17,7 @@ const WeatherApp = () => {
 
   const fetchWeatherData = async () => {
     if (!cityCoordinates[cityName]) {
-      alert("Unknown City Name -- only city options are 'Dallas', 'Houston', 'Austin'");
+      alert("Unknown City Name -- only city options are 'Dallas', 'Houston', 'Austin', 'El Paso'");
       return;
     }
 
