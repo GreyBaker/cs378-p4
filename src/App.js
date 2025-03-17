@@ -7,11 +7,11 @@ const cityCoordinates = {
   "Dallas": {latitude: 32.78, longitude: -96.81},
   "Houston": {latitude: 29.76, longitude:-95.36},
   "Austin": {latitude: 30.27, longitude: -97.74},
-  "El Paso": {latitude: 31.76, longitude: -106.49}
+  "El Paso": {latitude: 31.76, longitude: -106.49},
 };
 
 const WeatherApp = () => {
-  const [mode, setMode] = useState("temperature_2m");
+  const [mode, setMode] = useState("Temperature");
   const [cityName, setCity] = useState("El Paso");
   const [output, setOutput] = useState("uninitialized");
 
@@ -33,6 +33,7 @@ const WeatherApp = () => {
     const url = "https://api.open-meteo.com/v1/forecast";
 
     try {
+      setOutput("starting fetch")
       const responses = await fetchWeatherApi(url, params);
       const response = responses[0];
       const hourly = response.hourly();
