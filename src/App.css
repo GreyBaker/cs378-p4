@@ -1,0 +1,21 @@
+/* 
+  Style your elements by creating CSS classes here.
+  Below, you can see an example of a class called "menu" that changes the color of the text to blue. Modify according to your needs.
+*/
+
+body {
+  color: black;
+}
+#mode-button {
+  height:24px;
+  font-size:18px;
+  line-height:10px;
+  white-space:nowrap;
+  border-radius:40px;
+  background-color:rgb(233, 233, 233);
+  box-shadow:2px 4px 3px 0px rgba(0, 0, 0, 0.404);
+}
+#text-output{
+  font-size:70px;
+  font-style: bold;
+}
